@@ -131,7 +131,7 @@ These clusters provides the visualization of sale price vs total living area. Th
 
   - It achieves an RMSE of $201,773.66 on the testing data, indicating its predictions are relatively close to the actual home selling prices on average.
 
-  - With a lowest validation (testing) loss the model shows effective handling of the predictive task, minimizing the overall error in forecasting.
+  - With a low validation (testing) loss the model shows effective handling of the predictive task, minimizing the overall error in forecasting.
 
 
 - **Overfitting Consideration:**
