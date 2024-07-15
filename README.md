@@ -102,15 +102,48 @@ These clusters provides the visualization of sale price vs total living area. Th
 
 - **Comparing models**
 
-| Model 1 | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
-  
+  - **Model 1:**
+
+| Dataset       | RMSE        | MAE         | R2       |
+|---------------|-------------|-------------|----------|
+| **Testing**   | 196,363.63  | 137,155.60  | 0.5588   |
+| **Training**  | 141,832.23  | 95,090.26   | 0.7745   |
     
 
-------------------------------------------------------- 
 
-- **Based on our model's performance metrics, here's how effectively it addresses the business problem:**
+  - **Model 2:**
+
+| Dataset       | RMSE        | MAE         | R2       |
+|---------------|-------------|-------------|----------|
+| **Testing**   | 200,702.35  | 139,991.55  | 0.5391   |
+| **Training**  | 128,443.17  | 83,439.11   | 0.8151   |
+
+  - **Model 3:**
+
+| Dataset       | RMSE        | MAE         | R2       |
+|---------------|-------------|-------------|----------|
+| **Testing**   | 205,066.82  | 142,577.82  | 0.5188   |
+| **Training**  | 127,129.55  | 83,368.55   | 0.8189   |
+
+
+
+- **Model 2 stands out as the best choice:**
+
+  - It achieves an RMSE of $201,773.66 on the testing data, indicating its predictions are relatively close to the actual home selling prices on average.
+
+  - With a lowest validation (testing) loss the model shows effective handling of the predictive task, minimizing the overall error in forecasting.
+
+
+- **Overfitting Consideration:**
+
+ Model 2 shows balanced performance between training and testing datasets, reflected in its consistent metrics.
 
 -----------------------------------------------
+
+
+- **Based on our model's performance metrics, here's how effectively it addresses the business problem:**
+    - Accurate Predictions: With an RMSE of $201,773.66 on the testing data, Model 2 reliably predicts home prices, facilitating precise decision-making in property transactions.
+      
+    - Variance Explanation: The model achieves a substantial R2 score of 53.91%, indicating it explains a significant portion of the variability in home prices. This insight into market dynamics is crucial for strategic planning in real estate investments.
+
+  - Generalization: Model 2 demonstrates consistent performance across datasets, highlighting its robust generalization capability. This consistency ensures dependable predictions that can adapt to different market conditions, enhancing stakeholders' confidence in its applicability.
