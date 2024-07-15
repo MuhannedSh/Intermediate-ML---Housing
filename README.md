@@ -1,20 +1,21 @@
 # **Intermediate-ML- Housing**
 
----------------------
+----------------------------------------------------------------
+
 ![image_2024-07-13_152913981](https://github.com/user-attachments/assets/65164a8c-c2ca-4ba4-ae60-24dcffcb5922)
 
-------------------------------------------
 - The Problem A house-flipping company would like to identify underpriced homes by comparing asking prices to predicted sale prices. They would like to segment homes into groups to analyze what kinds of homes there are. They would also like a model that predicts the selling price of a home.
 
-------------------------------------
--  # **KMeans Clusters**
+----------------------------------------------------------------
+ # **KMeans Clusters**
+----------------------------------------------------------------
 
-    - ## **Choosing number o clusters**:
-      ![download](https://github.com/user-attachments/assets/cb8d70e0-d157-4a18-885c-46b7787f680f)
-      - The above line plot shows that the graph starts to level off at 3 clusters. there is an elbow on cluster 3 , but 5 clusters might be another suitable choice for a good number of clusters.
+- ## **Choosing number o clusters**:
+  ![download](https://github.com/user-attachments/assets/cb8d70e0-d157-4a18-885c-46b7787f680f)
+      `The above line plot shows that the graph starts to level off at 3 clusters. there is an elbow on cluster 3 , but 5 clusters might be another suitable choice for a good number of clusters.`
      
-    - ## **Clustering Report Analysis**:
-      ![download (29)](https://github.com/user-attachments/assets/6152d9b8-2826-48c3-98b6-e4161e12ef88)
+- ## **Clustering Report Analysis**:
+  ![download (29)](https://github.com/user-attachments/assets/6152d9b8-2826-48c3-98b6-e4161e12ef88)
 
 
 
@@ -56,25 +57,27 @@
 These clusters provides the visualization of sale price vs total living area. These are graphs illustrating the comparison of clusters
  per pricing / living area, showing that generally a higher total living area is also related to a higher sales price
           
-----------------------------
-
+----------------------------------------------------------------
 ## **Deep Learning Models:**
+----------------------------------------------------------------
 
-  - **Model 1 :**
-        - In the first model , we will use the following as a first step in building the model:
+-
+    - **Model 1 :**
+       - In model 2 , we will increase number of epochs,and get a sense of when the model loss and metrics be satisfied:
             - Inpuer layer: 1
             - hidden layers: 2
             - Ealry stopping = 10.
             - Dropout = 20%.
             - Epoch: 50.
-
-    ![download (30)](https://github.com/user-attachments/assets/948688a9-1d18-45c7-a892-b488962d08f1)
+        
+   ![download (30)](https://github.com/user-attachments/assets/948688a9-1d18-45c7-a892-b488962d08f1)
 
 
      `The plot indicated that the model is still learning,
           there is a room to fix it in the next models`
+        
 
-
+         
     - **Model 2 :**
        - In model 2 , we will increase number of epochs,and get a sense of when the model loss and metrics be satisfied:
             - Inpuer layer: 1
@@ -97,12 +100,12 @@ These clusters provides the visualization of sale price vs total living area. Th
 
     ![download (32)](https://github.com/user-attachments/assets/bc51eb97-98d9-4a65-a286-fa76ff503f7d)
 
-     `there is a significant improvement after using l1/l2 regularizer , and overfitting issue handeld better and the        stabilization of loss has been achieved.`
-  ----------------------------------------------------------------
+     `there is a significant improvement after using l1/l2 regularizer , and overfitting issue handeld better and the stabilization of loss has been achieved.`
+----------------------------------------------------------------
+## **Comparing models**
+----------------------------------------------------------------
 
-- **Comparing models**
-
-  - **Model 1:**
+- **Model 1:**
 
 | Dataset       | RMSE        | MAE         | R2       |
 |---------------|-------------|-------------|----------|
@@ -111,14 +114,14 @@ These clusters provides the visualization of sale price vs total living area. Th
     
 
 
-  - **Model 2:**
+- **Model 2:**
 
 | Dataset       | RMSE        | MAE         | R2       |
 |---------------|-------------|-------------|----------|
 | **Testing**   | 200,702.35  | 139,991.55  | 0.5391   |
 | **Training**  | 128,443.17  | 83,439.11   | 0.8151   |
 
-  - **Model 3:**
+- **Model 3:**
 
 | Dataset       | RMSE        | MAE         | R2       |
 |---------------|-------------|-------------|----------|
