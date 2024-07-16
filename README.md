@@ -101,52 +101,83 @@ These clusters provides the visualization of sale price vs total living area. Th
     ![download (32)](https://github.com/user-attachments/assets/bc51eb97-98d9-4a65-a286-fa76ff503f7d)
 
      `there is a significant improvement after using l1/l2 regularizer , and overfitting issue handeld better and the stabilization of loss has been achieved.`
+
+
+
+    - **Model 4 :**
+      -  In this model, I will try decreasing hidden layers in order to reduce complexity and fix the overfitting issue in model 3.:
+            - Inpuer layer: 1
+            - hidden layers: 2
+            - Ealry stopping = 8
+            -  Dropout = 20%.
+            - Epoch: 60.
+
+
+          =![download (33)](https://github.com/user-attachments/assets/3e65995b-d5f4-4bc9-8b04-a345e5482c69)
+
 ----------------------------------------------------------------
 ## **Comparing models**
 ----------------------------------------------------------------
 
 - **Model 1:**
 
-| Dataset       | RMSE        | MAE         | R2       |
-|---------------|-------------|-------------|----------|
-| **Testing**   | 196,363.63  | 137,155.60  | 0.5588   |
-| **Training**  | 141,832.23  | 95,090.26   | 0.7745   |
-    
+------------------------------------------------------------
+| Dataset        | RMSE          | MAE           | R2        |
+|----------------|---------------|---------------|-----------|
+| **Testing**    | 197,709.1176  | 138,280.3440  | 0.5527    |
+| **Training**   | 141,532.0892  | 95,575.7123   | 0.7755    |
+------------------------------------------------------------
 
 
 - **Model 2:**
 
-| Dataset       | RMSE        | MAE         | R2       |
-|---------------|-------------|-------------|----------|
-| **Testing**   | 200,702.35  | 139,991.55  | 0.5391   |
-| **Training**  | 128,443.17  | 83,439.11   | 0.8151   |
+------------------------------------------------------------
+| Dataset        | RMSE          | MAE           | R2        |
+|----------------|---------------|---------------|-----------|
+| **Testing**    | 197,481.9082  | 137,962.4054  | 0.5538    |
+| **Training**   | 134,860.6538  | 89,514.6594   | 0.7962    |
+------------------------------------------------------------
 
 - **Model 3:**
+  
 
-| Dataset       | RMSE        | MAE         | R2       |
-|---------------|-------------|-------------|----------|
-| **Testing**   | 205,066.82  | 142,577.82  | 0.5188   |
-| **Training**  | 127,129.55  | 83,368.55   | 0.8189   |
+-----------------------------------------------------------
+| Dataset        | RMSE          | MAE           | R2        |
+|----------------|---------------|---------------|-----------|
+| **Testing**    | 204,872.2002  | 143,596.0998  | 0.5197    |
+| **Training**   | 117,365.8708  | 74,162.2296   | 0.8456    |
+------------------------------------------------------------
+
+
+- **Model 4:**
+
+------------------------------------------------------------
+| Dataset        | RMSE          | MAE           | R2        |
+|----------------|---------------|---------------|-----------|
+| **Testing**    | 206,072.8831  | 144,085.6794  | 0.5141    |
+| **Training**   | 169,018.0594  | 115,380.4149  | 0.6798    |
+------------------------------------------------------------
 
 
 
-- **Model 2 stands out as the best choice:**
+- **Model 4 stands out as the best choice:**
 
-  - It achieves an RMSE of $201,773.66 on the testing data, indicating its predictions are relatively close to the actual home selling prices on average.
+  - Model 4 achieves an RMSE of 206,072.88 on the testing dataset, indicating its predictions are relatively close to the actual home selling prices on average..
 
   - With a low validation (testing) loss the model shows effective handling of the predictive task, minimizing the overall error in forecasting.
 
 
+
 - **Overfitting Consideration:**
 
- Model 2 shows balanced performance between training and testing datasets, reflected in its consistent metrics.
+Model 4 Performance: Model 4 shows balanced performance between training and testing datasets, reflected in its consistent metrics across both sets.
 
 -----------------------------------------------
 
 
 - **Based on our model's performance metrics, here's how effectively it addresses the business problem:**
-    - Accurate Predictions: With an RMSE of $201,773.66 on the testing data, Model 2 reliably predicts home prices, facilitating precise decision-making in property transactions.
-      
-    - Variance Explanation: The model achieves a substantial R2 score of 53.91%, indicating it explains a significant portion of the variability in home prices. This insight into market dynamics is crucial for strategic planning in real estate investments.
+  - Accurate Predictions: Model 2 achieves an RMSE of 206,072.88 on the testing data, indicating its predictions are relatively close to the actual home selling prices on average. This precision facilitates precise decision-making in property transactions.
+
+  - Variance Explanation: The model achieves an R2 score of 51.41%, indicating it explains a significant portion of the variability in home prices. This insight into market dynamics is crucial for strategic planning in real estate investments.
 
   - Generalization: Model 2 demonstrates consistent performance across datasets, highlighting its robust generalization capability. This consistency ensures dependable predictions that can adapt to different market conditions, enhancing stakeholders' confidence in its applicability.
